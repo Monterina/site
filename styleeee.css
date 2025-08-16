@@ -1,54 +1,81 @@
-сы*{
+*{
    margin: 0px;
-    padding: 0px;  
+   padding: 0px;  
+  
 }
 
 header{
     font: 25px Raleway;
-    height: 150%;
-    margin-top:0 ;
-    border-radius: 0 0 10px 10px;
-    background: var( --dark-color);
-    
+    background-color: rgba(241, 241, 241, 0.9);
+    z-index: 999;
+    text-align: center;
+    margin:20px 20px 20px ; 
+    position:fixed;
+    top: 0;       /* Фиксирует сверху */ 
+    left: 20px; 
+    right: 20px;
+    border-radius: 20px 20px 20px 20px;
+    backdrop-filter: blur(10px);
+    font-family: Raleway;
+    font-weight:bolder;
+    font: Raleway;
+    padding-top: 5px; /* Примерно высота header + margin */
+    display: block;
+    border: 2px solid #186035;
+    box-shadow: 0 5px 30px rgb(7, 93, 33);
 }
+ 
+
 body{
     margin: 0px;
     padding: 0px;
     font-family: Raleway;
     background-image: linear-gradient( #ffffff);
     font-weight:bolder;
-     font: Raleway;
-     background-image: linear-gradient(  #61a269, #f9f9f9, #61a269);
-   
+    font: Raleway;
+    /* background-image: linear-gradient(  #61a269, #f9f9f9, #61a269); */
+    
 }
-
+h1, h2, h3 {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
 
 .name{
     margin: 0;
     margin-left: 0px;
-    margin-right: 580px;
-    font-size: 20px;
-    color: #ffffff;
+    margin-right: 130px;
+    font-size: 25px;
+    color: #000000;
     display: inline-block;
+    -webkit-text-stroke: 1px rgb(0, 0, 0); /* Для Safari/Chrome */
     
 
 }
 
 .service{
     text-align: center;
-  
+   
+   
     
+
 }
 .link{
-    text-transform:uppercase;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 18px; 
-    margin-top: 0px;
+     text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-top: 0px;
+  display: inline-block; /* Для корректного переноса */
 
 }
 
-
+@media (max-width: 229px) {
+  .link {
+    display: block; /* Каждая ссылка на новой строке */
+    margin-bottom: 5px;
+  }
+}
 li{
     display: inline-block;
     margin-top: 0;
@@ -62,22 +89,45 @@ li{
 
 
 .link:hover{
-    color: #919191;
+    color: #817f7f;
+    -webkit-text-stroke: 2px rgb(79, 74, 74); /* Для Safari/Chrome */
     
 }
 
 
 h1{
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     display: block;
-    background-color: var( --dark-color);
-    color: #ffffff;
-    margin-top: 50px;
-    font-weight: lighter;
-    box-shadow: #565c5b 0 0 10px 1px;
-    font-size: 21px;
+    
+    
+    margin-top: 150px;
+    margin-left: 50px;
+  
+   /* text-shadow: 0 15px 30px rgb(102, 214, 125);
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* Для Safari/Chrome */
+  /*   border: 1px solid #bdacac; /* Толщина, стиль, цвет */
+  /*   width: 70%;
+     border-radius: 20px;
+    background-color: #0c6928;  */
+
+     font-family: 'Roboto', sans-serif;
+     color: #82ba94;
+     text-transform: uppercase;
+     text-shadow: 1px 1px 1px #1a5d2b,
+               1px 2px 1px #447e52,
+               1px 3px 1px #447e52,
+               1px 4px 1px #447e52,
+               1px 5px 1px #447e52,
+               1px 1px 1px #447e52,
+               1px 10px 5px rgba(0, 0, 0, 0.5),
+               1px 15px 10px rgba(0, 0, 0, 0.4),
+               1px 20px 30px rgba(16, 16, 16, 0.3),
+               1px 25px 50px rgba(16, 16, 16, 0.2);
+    
+
 }
+
 
 h5{
     margin: 15px;
@@ -85,10 +135,7 @@ h5{
     font-size: 21px;
     text-transform: uppercase;
     font: 1em Raleway;
-    font-weight: bold;
-    
-  
-    
+    font-weight: bold;    
 }
 
 p{  
@@ -103,22 +150,42 @@ p{
     padding: 10px 10px 10px 10px;
     margin: 30px 20px 10px 50px ;
     /* box-shadow: #6e6e6e 0 0 10px 1px; */
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 50px 70px 50px 70px;
     display: inline-table;
     width: 200px;
-    height: 150px;
-
+    height: 200px;
+    background-color: rgba(241, 241, 241, 0.9);
     font: 1em Raleway;
+    font-size: 12px;
+    border: #186035 solid 2px;
+    box-shadow: 0 5px 30px rgb(7, 93, 33);
     
+
+   
 }
-/* .podhod:hover{
+
+
+.podhod:hover{
      transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-} */
+}
+
+
 img{
     width: 20%;
-    
    } 
+
+
+ #particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Отправляем на задний план */
+    pointer-events: none; /* Чтобы можно было кликать сквозь canvas */
+  }
+  
 
 
 
@@ -156,23 +223,10 @@ a:hover{
 
 
 
-
-
-
-
-
-
-
-.container {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            margin-top: 30px;
-            text-align: center;
-            
-        }
-        
-    
+    .services-wrapper{
+        margin: 50px 100px ;
+        text-align: center;
+    }
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
@@ -181,18 +235,17 @@ a:hover{
         .services-grid {
             display: flex; /* Изменяем на flex */
             flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
-            gap: 70px;
-            margin-bottom: 50px;
-            overflow-x: auto; /* Добавляем горизонтальную прокрутку если не помещается */
-            padding-bottom: 20px; /* Пространство для скролла */
-            -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+             gap: 30px; 
+             margin-bottom: 50px; 
+             margin-right: 50px;
+           
             
         } 
 
        
         
         .service-card {
-            background: white;
+            background-color: rgba(241, 241, 241, 0.9);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -200,12 +253,17 @@ a:hover{
             width: 350px; /*Фиксированная ширина */
             flex: 0 0 auto; /* Запрещаем растягивание/сжатие */
             text-align: center;
+            height: 400px;
+
 
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+           
+            color: #000000;
+            transition: transform 0.5s ease-in-out;
+            transform: scale(1.05);
+
         }
         
         .card-header {
@@ -235,7 +293,7 @@ a:hover{
         
         .card-body li:before {
             content: "•";
-            color: var(--accent-color);
+            color: var( --primary-color);
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -258,7 +316,7 @@ a:hover{
         
         .cta-button {
             display: inline-block;
-            background: var(--accent-color);
+            background: var( --primary-color);
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
@@ -271,9 +329,9 @@ a:hover{
         }
         
         .cta-button:hover {
-            background: #ea6d06;
+            background: #2e7d32;
             color: #ffffff;
-        }
+        } 
 
         :root {
             --primary-color: #2e7d32;
@@ -329,7 +387,7 @@ a:hover{
         }
         
         .service-card {
-            background: white;
+             background-color: rgba(241, 241, 241, 0.7);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -391,7 +449,7 @@ a:hover{
         
         .cta-button {
             display: inline-block;
-            background: var(--accent-color);
+            background: var(--primary-color);
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
@@ -403,7 +461,7 @@ a:hover{
         }
         
         .cta-button:hover {
-            background: #ff6f00;
+            background: var(--dark-color) ;
         }
         
         footer {
