@@ -21,8 +21,8 @@ header{
     font: Raleway;
     padding-top: 5px; /* Примерно высота header + margin */
     display: block;
-    border: 2px solid #186035;
-    box-shadow: 0 5px 30px rgb(7, 93, 33);
+    border: 2px solid #090909;
+    box-shadow: 0 5px 30px rgb(33, 33, 33);
 }
  
 
@@ -30,7 +30,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Raleway;
-    background-image: linear-gradient( #bbcdb9);
+    background-image: linear-gradient( #aad0e6, #2e5b5d);
     font-weight:bolder;
     font: Raleway;
     /* background-image: linear-gradient(  #61a269, #f9f9f9, #61a269); */
@@ -52,9 +52,9 @@ h1, h2, h3 {
      font-family: 'Roboto', sans-serif;
      color: #4d6e58;
      text-transform: uppercase;
-     text-shadow: 1px 1px 1px #000501,
-               1px 2px 1px #1a1e1b,
-               1px 3px 1px #447e52,
+     text-shadow: 1px 1px 1px #1c31a9,
+               1px 2px 1px #a6a6c0,
+               1px 3px 1px #d7dfe5,
                1px 4px 1px #447e52,
                1px 5px 1px #447e52,
                1px 1px 1px #447e52,
@@ -124,14 +124,14 @@ h1{
     background-color: #0c6928;  */
 
      font-family: 'Roboto', sans-serif;
-     color: #82ba94;
+     color: #383b39;
      text-transform: uppercase;
-     text-shadow: 1px 1px 1px #1a5d2b,
-               1px 2px 1px #447e52,
-               1px 3px 1px #447e52,
-               1px 4px 1px #447e52,
-               1px 5px 1px #447e52,
-               1px 1px 1px #447e52,
+     text-shadow: 1px 1px 1px #3d413e,
+               1px 2px 1px #e0e7e2,
+               1px 3px 1px #e0e7e2,
+               1px 4px 1px #e0e7e2,
+               1px 5px 1px #e0e7e2,
+               1px 1px 1px #e0e7e2,
                1px 10px 5px rgba(0, 0, 0, 0.5),
                1px 15px 10px rgba(0, 0, 0, 0.4),
                1px 20px 30px rgba(16, 16, 16, 0.3),
@@ -169,8 +169,8 @@ p{
     background-color: rgba(241, 241, 241, 0.9);
     font: 1em Raleway;
     font-size: 12px;
-    border: #186035 solid 2px;
-    box-shadow: 0 5px 30px rgb(7, 93, 33);
+    border: #343d37 solid 2px;
+    box-shadow: 0 5px 30px rgb(31, 60, 40);
     
 
    
@@ -236,7 +236,7 @@ a:hover{
 
 
     .services-wrapper{
-        margin: 50px 100px ;
+        margin: 30px 100px ;
         text-align: center;
     }
         .subtitle {
@@ -368,7 +368,7 @@ a:hover{
         .carousel-btn {
             width: 50px;
             height: 50px;
-            background: var(--primary-color);
+            background: var(--text-color);
             color: white;
             border: none;
             border-radius: 50%;
@@ -378,8 +378,9 @@ a:hover{
         }
         
         .carousel-btn:hover {
-            background: var(--dark-color);
+            background: var(--light-color);
             transform: scale(1.1);
+            color: #000;
         }
         
         .carousel-btn:disabled {
@@ -414,7 +415,7 @@ a:hover{
         }
         
         .card-header {
-            background: var(--primary-color);
+            background: var(--text-color);
             color: white;
             padding: 15px;
             font-size: 1.3rem;
@@ -461,7 +462,7 @@ a:hover{
         
         .cta-button {
             display: inline-block;
-            background: var(--primary-color);
+            background: var(--text-color);
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
@@ -473,7 +474,7 @@ a:hover{
         }
         
         .cta-button:hover {
-            background: var(--dark-color) ;
+            background: var(--accent-color) ;
         }
         
         footer {
