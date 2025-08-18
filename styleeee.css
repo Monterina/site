@@ -6,7 +6,7 @@
 
 header{
     font: 25px Raleway;
-    background-color: rgba(241, 241, 241, 0.9);
+    /* background-color: rgba(168, 162, 162, 0.9); */
     z-index: 999;
     text-align: center;
     margin:20px 20px 20px ; 
@@ -14,15 +14,19 @@ header{
     top: 0;       /* Фиксирует сверху */ 
     left: 20px; 
     right: 20px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 10px 10px 10px 10px;
     backdrop-filter: blur(10px);
     font-family: Raleway;
     font-weight:bolder;
     font: Raleway;
     padding-top: 5px; /* Примерно высота header + margin */
-    display: block;
-    border: 2px solid #090909;
+    display: flex;
+    background: url(../site/img/cloud-03.png);
     box-shadow: 0 5px 30px rgb(33, 33, 33);
+   height: 60px;
+    flex-direction: row;
+
+    align-items: center;
 }
  
 
@@ -30,90 +34,211 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Raleway;
-    background-image: linear-gradient( #aad0e6, #2e5b5d);
+    /* background-image: linear-gradient( #aad0e6, #2e5b5d); */
+    /* background-image: linear-gradient(rgba(27, 135, 83, 0.7)); */
     font-weight:bolder;
     font: Raleway;
-    /* background-image: linear-gradient(  #61a269, #f9f9f9, #61a269); */
+     /* background-image: url(../site/img/фон1.jpg);
+        background-size: cover;
+   background-position: center; */
+    background-image: linear-gradient(  #456549, #f9f9f9,#c7c3c3);
     
 }
+.first_block{
+    height: 600px;
+    width: 100%;
+    
+    background-size: cover;
+   background-position: center;
+    background-image: linear-gradient(rgba(27, 135, 83, 0.7),  rgba(23, 82, 58, 0.7)),url(../site/img/фон1.jpg);
+     mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    white 15%,
+    white 85%,
+    transparent 100%
+  );
+  box-shadow: 0 0 20px 50px rgba(31, 86, 38, 0.5); /* Размытая тень по краям */
+}
+
+
+
 h1, h2, h3 {
             opacity: 0;
             transition: opacity 2s ease-in-out;
         }
 
 .name {
-    margin: 0;
-    margin-left: 0px;
-    margin-right: 130px;
-    font-size: 25px;
+    margin-top: 250px;
+    margin-left: 400px;
+    font-size: 48px;
+    text-align: right;
+    font-family: Raleway;;
     /* color: #000000; */
     display: inline-block;
-    /* -webkit-text-stroke: 1px rgb(0, 0, 0); Для Safari/Chrome */
-     font-family: 'Roboto', sans-serif;
-     color: #4d6e58;
+     -webkit-text-stroke: 1px rgb(241, 245, 243);
+     color: #bcddc5;
      text-transform: uppercase;
-     text-shadow: 1px 1px 1px #1c31a9,
-               1px 2px 1px #a6a6c0,
+     text-shadow: 1px 1px 1px #093828,
+               /* 1px 2px 1px #a6a6c0,
                1px 3px 1px #d7dfe5,
                1px 4px 1px #447e52,
                1px 5px 1px #447e52,
-               1px 1px 1px #447e52,
-               1px 10px 5px rgba(0, 0, 0, 0.5),
-               1px 15px 10px rgba(0, 0, 0, 0.4),
+               1px 1px 1px #447e52, */
+               1px 10px 5px rgba(224, 211, 211, 0.5),
+               1px 15px 10px rgba(182, 171, 171, 0.4),
                1px 20px 30px rgba(16, 16, 16, 0.3),
-               1px 25px 50px rgba(16, 16, 16, 0.2);
+               1px 25px 50px rgba(16, 16, 16, 0.2); 
 
 }
 
+@media (max-width: 1260px) {
+   .name {
+    margin-top: 250px;
+    margin-left: 100px;
+    font-size: 48px;
+    text-align: right;
+    font-family: Raleway;;
+    /* color: #000000; */
+    display: inline-block;
+     -webkit-text-stroke: 1px rgb(241, 245, 243);
+     color: #bcddc5;
+     text-transform: uppercase;
+     text-shadow: 1px 1px 1px #093828,
+               /* 1px 2px 1px #a6a6c0,
+               1px 3px 1px #d7dfe5,
+               1px 4px 1px #447e52,
+               1px 5px 1px #447e52,
+               1px 1px 1px #447e52, */
+               1px 10px 5px rgba(224, 211, 211, 0.5),
+               1px 15px 10px rgba(182, 171, 171, 0.4),
+               1px 20px 30px rgba(16, 16, 16, 0.3),
+               1px 25px 50px rgba(16, 16, 16, 0.2); 
+
+}
+  
+  
+}
 .service{
     text-align: center;
-   
-   
-    
-
 }
-.link{
-     text-transform: uppercase;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  max-width: 1500px;
+    margin: 10px auto;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Контейнер для элементов */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px 0 50px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  
+}
+
+/* Логотип слева */
+.logo-item {
+  flex: 1;
+}
+.name_header {
+  margin: 0;
+  font-size: 24px;
+  color: #2E7D32; /* Зеленый цвет */
+  font-weight: 700;
+}
+
+/* Навигация по центру */
+.nav-center {
+  display: block;
+  margin: 0 0 0 200px;
+ 
+}
+
+.link {
+  text-transform: uppercase;
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  margin-top: 0px;
-  display: inline-block; /* Для корректного переноса */
-
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+  margin-left: 10px;
+ 
+}
+.link:hover {
+  color: #2E7D32;
+  font-weight: bolder;
 }
 
-@media (max-width: 229px) {
-  .link {
-    display: block; /* Каждая ссылка на новой строке */
-    margin-bottom: 5px;
+/* Контакты справа */
+.contacts-item {
+position: fixed;
+  left: 1100px;
+  right: 10px;
+}
+
+.tel {
+ 
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+.callback-btn {
+  padding: 8px 15px;
+  background: #2E7D32;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+  
+}
+.callback-btn:hover {
+  background: #1B5E20;
+}
+
+
+@media (max-width: 996px) {
+  .nav-center{
+     display: inline; /* Каждая ссылка на новой строке */
+    margin-left: 30px;
+    margin-right: 20px;
+   
+  
   }
 }
+
 li{
     display: inline-block;
     margin-top: 0;
     /* background-color: #bce8e6; */
     padding: 10px;
+    gap: 30px;
 
     
 }
 
-
-
-
-.link:hover{
-    color: #817f7f;
-    -webkit-text-stroke: 2px rgb(79, 74, 74); /* Для Safari/Chrome */
-    
-}
 
 
 h1{
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     display: block;
-    
-    
-    margin-top: 150px;
+    margin-top: 50px;
     margin-left: 50px;
   
    /* text-shadow: 0 15px 30px rgb(102, 214, 125);
@@ -142,9 +267,9 @@ h1{
 
 
 h5{
-    margin: 15px;
+    /* margin: 15px; */
     text-align: center;
-    font-size: 21px;
+    font-size: 28px;
     text-transform: uppercase;
     font: 1em Raleway;
     font-weight: bold;    
@@ -154,33 +279,39 @@ p{
     margin: auto;
     text-align: center;
     background-size: cover;
+    font-size: 16px;
     
 }
-
+.second_block{
+    /* box-shadow: #6e6e6e 0 0 10px 1px;  */
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px; 
+    box-shadow: 0 5px 30px rgb(31, 60, 40); 
+    
+}
 .podhod{
     /* background-color: #f1f8e9;  */
     padding: 10px 10px 10px 10px;
-    margin: 30px 20px 10px 50px ;
+    margin: 20px 20px 10px 50px ;
     /* box-shadow: #6e6e6e 0 0 10px 1px; */
-    border-radius: 50px 70px 50px 70px;
+    /* border-radius: 10px 10px 10px 10px; */
     display: inline-table;
     width: 200px;
     height: 200px;
-    background-color: rgba(241, 241, 241, 0.9);
+    /* background-color: rgba(241, 241, 241, 0.9); */
     font: 1em Raleway;
-    font-size: 12px;
-    border: #343d37 solid 2px;
-    box-shadow: 0 5px 30px rgb(31, 60, 40);
-    
-
-   
+ 
+    /* border: #343d37 solid 2px;
+    box-shadow: 0 5px 30px rgb(31, 60, 40); */
+       
 }
 
 
-.podhod:hover{
+/* .second_block:hover{
      transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+} */
 
 
 img{
@@ -279,7 +410,7 @@ a:hover{
         }
         
         .card-header {
-            background: var(--primary-color);
+            background: #18481b;
             color: white;
             padding: 10px 5px;
             font-size: 1.3rem;
@@ -368,8 +499,8 @@ a:hover{
         .carousel-btn {
             width: 50px;
             height: 50px;
-            background: var(--text-color);
-            color: white;
+            background: #b4aaaa;
+            color: #000000;
             border: none;
             border-radius: 50%;
             font-size: 20px;
@@ -378,9 +509,9 @@ a:hover{
         }
         
         .carousel-btn:hover {
-            background: var(--light-color);
+            background: #494848;
             transform: scale(1.1);
-            color: #000;
+            color: #ffffff;
         }
         
         .carousel-btn:disabled {
@@ -415,7 +546,7 @@ a:hover{
         }
         
         .card-header {
-            background: var(--text-color);
+            background: #18481b;
             color: white;
             padding: 15px;
             font-size: 1.3rem;
@@ -474,7 +605,7 @@ a:hover{
         }
         
         .cta-button:hover {
-            background: var(--accent-color) ;
+            background: #18481b;
         }
         
         footer {
@@ -607,6 +738,219 @@ a:hover{
         
         
         
-       
-        
-       
+
+ .eco-section {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 40px 20px;
+}
+
+
+.eco-subtitle {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #555;
+  font-size: 25px;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.eco-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.eco-card:hover {
+  transform: translateY(-5px);
+}
+
+.eco-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.eco-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  fill: #173418;
+}
+
+.eco-list {
+  list-style: none;
+  padding: 0;
+}
+
+.eco-list li {
+  padding: 5px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.eco-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #364e38;
+}
+
+.checked {
+  border-left: 15px solid #18481b;
+}
+
+.eco-checkmark {
+  color: #1d341e;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}       
+
+
+
+
+
+
+
+
+/* Основные стили секции */
+.pricing-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-header h2 {
+  color: #18481b;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Стили таблицы */
+.pricing-table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row.header {
+  background-color: #18481b;
+  color: white;
+  font-weight: bold;
+}
+
+.table-row:hover:not(.header) {
+  background-color: #f5f5f5;
+}
+
+.table-row.highlight {
+  background-color: #E8F5E9;
+}
+
+.table-cell {
+  padding: 18px 20px;
+  flex: 1;
+}
+
+.service {
+  flex: 2;
+  font-weight: 500;
+  text-align: left;
+}
+.service1 {
+  flex: 2;
+  font-weight: 500;
+  text-align: center;
+
+}
+
+.price {
+  text-align: right;
+  font-weight: 600;
+  color: #18481b;
+  text-align: center;
+}
+
+/* Примечания */
+.pricing-notes {
+  padding: 0 20px;
+  color: #111010;
+  line-height: 1.6;
+}
+
+.pricing-notes p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .table-row {
+    flex-direction: column;
+  }
+  
+  .table-cell {
+    padding: 12px 15px;
+  }
+  
+  .price {
+    text-align: left;
+  }
+
+
+}
+@media (max-width: 991px) {
+  .eco-grid {
+  display: inline-block;
+  width: 500px;
+  height: 600px;
+  align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+ .checked{
+    margin-top: 20px;
+}
+}
+
+@media (max-width: 1504px) {
+.podhod{
+  
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+}
