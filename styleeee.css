@@ -1202,7 +1202,7 @@ h5{
      margin-right: 20px;
 }
 .we p{
-    font-size: 8px;
+    font-size: 14px;
 }
 .service-card{
     display: inline-block;
@@ -1220,7 +1220,7 @@ h5{
 .eco-list{
     font-size: 30px;
 }
-.eco-card-header{
+.eco-card-header h5{
     font-size: 35px;
     text-align: center;
     -webkit-text-stroke: 1px rgb(32, 64, 48);
@@ -1236,10 +1236,13 @@ h1{
     font-size: 35px;
 }
 .s_title{
-font-size: 8px;
+font-size: 14px;
    
 }
 .note p{
-   font-size: 8px; 
+   font-size: 12px; 
+}
+.link{
+    font-size: 20px;
 }
 }
