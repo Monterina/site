@@ -1163,7 +1163,7 @@ a:hover{
   margin-left: 20px;
   margin-right: 20px; 
 }
-.pricing-notes p{
+.pricing-notes {
 font-size: 21px;
 }
 .service, .price{
@@ -1244,5 +1244,8 @@ font-size: 20px;
 }
 .link{
     font-size: 20px;
+}
+.pricing-notes {
+font-size: 21px;
 }
 }
